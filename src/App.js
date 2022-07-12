@@ -5,22 +5,34 @@ export default function App() {
 
   const [cards, setCards] = useState(() => [])
 
+  const [bestScore, setBestScore] = useState(() => 0)
+
   const [score, setScore] = useState(() => 0)
 
   function randomizeCards(id){
 
+    setCards((prevCards) => {
+      return prevCards.map(prevCard => {
+        return prevCard.id === id ? {...prevCard, hasPlayerClicked: true} : prevCard
+      })
+    })
+
     if(cards.some((card) => card.id === id && card.hasPlayerClicked)){
       setCards((prevCards) => {
-        return [...prevCards].sort(() => Math.random() - 0.5)
-      })
-    }
-    else{
-      setCards((prevCards) => {
         return prevCards.map(prevCard => {
-          return prevCard.id === id ? {...prevCard, hasPlayerClicked: true} : prevCard
+          return {...prevCard, hasPlayerClicked: false}
         })
       })
+      if(bestScore > score){
+        setBestScore(() => score)
+      }
+      setScore(() => 0)
     }
+    else{
+
+      setScore((prevScore) => prevScore + 1)
+    }
+
   }
 
   useEffect(() => {
@@ -39,8 +51,8 @@ export default function App() {
       <header>
         <h1>Game of Thrones Memory Game</h1>
         <div className="score">
-          <h2>Score: 0</h2>
-          <h2>Best score: 0</h2>
+          <h2>Score: {score}</h2>
+          <h2>Best score: {bestScore}</h2>
         </div>
         <p>Get points by clicking on an image but don't click on any more than one</p>
       </header>
