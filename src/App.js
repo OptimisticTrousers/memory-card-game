@@ -3,10 +3,24 @@ import {useState, useEffect} from 'react'
 
 export default function App() {
 
-  const [cards, setCards] = useState([])
+  const [cards, setCards] = useState(() => [])
 
-  function randomizeCards(){
+  const [score, setScore] = useState(() => 0)
 
+  function randomizeCards(id){
+
+    if(cards.some((card) => card.id === id && card.hasPlayerClicked)){
+      setCards((prevCards) => {
+        return [...prevCards].sort(() => Math.random() - 0.5)
+      })
+    }
+    else{
+      setCards((prevCards) => {
+        return prevCards.map(prevCard => {
+          return prevCard.id === id ? {...prevCard, hasPlayerClicked: true} : prevCard
+        })
+      })
+    }
   }
 
   useEffect(() => {
@@ -17,7 +31,7 @@ export default function App() {
   }, [])
 
   const renderedCards = cards.map(card => {
-    return <Card key={card.id} fullName={card.fullName} image={card.image} />
+    return <Card key={card.id} fullName={card.fullName} image={card.image} handleClick={() => randomizeCards(card.id)} />
   })
 
   return (
