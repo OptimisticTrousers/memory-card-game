@@ -1,6 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
   return (
     <div>
@@ -10,6 +7,7 @@ function App() {
           <h2>Score: 0</h2>
           <h2>Best score: 0</h2>
         </div>
+        <p>Get points by clicking on an image but don't click on any more than one</p>
       </header>
     </div>
   );
