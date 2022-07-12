@@ -1,14 +1,21 @@
 import Card from './components/Card'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 export default function App() {
 
-  const [cards, setCards] = useState(() => Array(12).fill(<Card/>))
+  const [cards, setCards] = useState([])
+
+  useEffect(() => {
+    fetch('https://thronesapi.com/api/v2/Characters').then(res => res.json()).then(data => {
+
+      setCards([...new Array(12)].map((card, index) => <Card key={data[index].id} fullName={data[index].fullName} image={data[index].imageUrl} />))
+    })
+  }, [])
 
   return (
     <div>
       <header>
-        <h1>Amphibia Memory Game</h1>
+        <h1>Game of Thrones Memory Game</h1>
         <div className="score">
           <h2>Score: 0</h2>
           <h2>Best score: 0</h2>

@@ -13,12 +13,16 @@ code {
 }
 
 figure{
-  width: 100px;
-  height: 100px;
   background-color: red;
 }
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  object-fit: scale-down;
 }
