@@ -5,12 +5,20 @@ export default function App() {
 
   const [cards, setCards] = useState([])
 
+  function randomizeCards(){
+
+  }
+
   useEffect(() => {
     fetch('https://thronesapi.com/api/v2/Characters').then(res => res.json()).then(data => {
 
-      setCards([...new Array(12)].map((card, index) => <Card key={data[index].id} fullName={data[index].fullName} image={data[index].imageUrl} />))
+      setCards([...new Array(12)].map((card, index) => ({id: data[index].id, fullName: data[index].fullName, image: data[index].imageUrl, hasPlayerClicked: false})))
     })
   }, [])
+
+  const renderedCards = cards.map(card => {
+    return <Card key={card.id} fullName={card.fullName} image={card.image} />
+  })
 
   return (
     <div>
@@ -23,7 +31,7 @@ export default function App() {
         <p>Get points by clicking on an image but don't click on any more than one</p>
       </header>
       <main>
-        {cards}
+        {renderedCards}
       </main>
     </div>
   );
