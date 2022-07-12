@@ -1,4 +1,10 @@
+import Card from './components/Card'
+import {useState} from 'react'
+
 function App() {
+
+  const [cards, setCards] = useState(() => Array(12).fill(<Card/>))
+
   return (
     <div>
       <header>
@@ -9,6 +15,9 @@ function App() {
         </div>
         <p>Get points by clicking on an image but don't click on any more than one</p>
       </header>
+      <main>
+        {cards}
+      </main>
     </div>
   );
 }
