@@ -46,12 +46,12 @@ export default function App() {
     <div>
       <header>
         <h1>Game of Thrones Memory Game</h1>
-        <div className="score">
+        <div className="scores">
           <h2>Score: {score}</h2>
           <h2>Best score: {bestScore}</h2>
         </div>
-        <p>Get points by clicking on an image but don't click on any more than one</p>
       </header>
+        <p>Get points by clicking on an image but don't click on any more than one</p>
       <main>
         {renderedCards}
       </main>
