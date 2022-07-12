@@ -12,6 +12,13 @@ code {
     monospace;
 }
 
-header{
-  display: flex;
+figure{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }

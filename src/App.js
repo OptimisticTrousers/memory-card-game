@@ -1,7 +1,7 @@
 import Card from './components/Card'
 import {useState} from 'react'
 
-function App() {
+export default function App() {
 
   const [cards, setCards] = useState(() => Array(12).fill(<Card/>))
 
@@ -21,5 +21,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
