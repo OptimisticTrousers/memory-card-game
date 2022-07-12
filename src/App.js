@@ -11,6 +11,12 @@ export default function App() {
 
   function randomizeCards(id){
 
+    setCards((prevCards) => {
+      return prevCards.map(prevCard => {
+        return prevCard.id === id ? {...prevCard, hasPlayerClicked: true} : prevCard
+      }).sort(() => Math.random() - 0.5)
+    })
+
     if(cards.some((card) => card.id === id && card.hasPlayerClicked)){
       setCards((prevCards) => {
         return [...prevCards].sort(() => Math.random() - 0.5)
@@ -20,12 +26,10 @@ export default function App() {
       }
       setScore(() => 0)
     }
-    setCards((prevCards) => {
-      return prevCards.map(prevCard => {
-        return prevCard.id === id ? {...prevCard, hasPlayerClicked: true} : prevCard
-      }).sort(() => Math.random() - 0.5)
-    })
-    setScore((prevScore) => prevScore + 1)
+    else{
+
+      setScore((prevScore) => prevScore + 1)
+    }
   }
 
   useEffect(() => {
