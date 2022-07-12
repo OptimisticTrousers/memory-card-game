@@ -17,7 +17,7 @@ export default function App() {
     )
 
     if(cards.some((card) => card.id === id && card.hasPlayerClicked)){
-      setCards((prevCards) => [...prevCards].sort(() => Math.random() - 0.5))
+      setCards((prevCards) => prevCards.map(prevCard => ({...prevCard, hasPlayerClicked: false})).sort(() => Math.random() - 0.5))
 
       if(bestScore < score){
         setBestScore(() => score)
