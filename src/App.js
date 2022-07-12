@@ -11,19 +11,18 @@ export default function App() {
 
   function randomizeCards(id){
 
-    setCards((prevCards) => {
-      return prevCards.map(prevCard => {
+    setCards((prevCards) => prevCards.map(prevCard => {
         return prevCard.id === id ? {...prevCard, hasPlayerClicked: true} : prevCard
       }).sort(() => Math.random() - 0.5)
-    })
+    )
 
     if(cards.some((card) => card.id === id && card.hasPlayerClicked)){
-      setCards((prevCards) => {
-        return [...prevCards].sort(() => Math.random() - 0.5)
-      })
-      if(bestScore > score){
+      setCards((prevCards) => [...prevCards].sort(() => Math.random() - 0.5))
+
+      if(bestScore < score){
         setBestScore(() => score)
       }
+
       setScore(() => 0)
     }
     else{
