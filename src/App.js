@@ -32,20 +32,20 @@ export default function App() {
   }
 
   useEffect(() => {
-    fetch('https://thronesapi.com/api/v2/Characters').then(res => res.json()).then(data => {
+    fetch('https://rickandmortyapi.com/api/character').then(res => res.json()).then(data => {
 
-      setCards([...new Array(12)].map((card, index) => ({id: data[index].id, fullName: data[index].fullName, image: data[index].imageUrl, hasPlayerClicked: false})))
+      setCards([...new Array(12)].map((card, index) => ({id: data.results[index].id, name: data.results[index].name, image: data.results[index].image, hasPlayerClicked: false})))
     })
   }, [])
 
   const renderedCards = cards.map(card => {
-    return <Card key={card.id} fullName={card.fullName} image={card.image} handleClick={() => randomizeCards(card.id)} />
+    return <Card key={card.id} name={card.name} image={card.image} handleClick={() => randomizeCards(card.id)} />
   })
 
   return (
     <div>
       <header>
-        <h1>Game of Thrones Memory Game</h1>
+        <h1>Rick and Morty Memory Game</h1>
         <div className="scores">
           <h2>Score: {score}</h2>
           <h2>Best score: {bestScore}</h2>

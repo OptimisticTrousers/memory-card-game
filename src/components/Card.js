@@ -1,9 +1,9 @@
-export default function Card({fullName, image, handleClick}){
+export default function Card({name, image, handleClick}){
     return (
         <figure onClick={handleClick}>
-                <img src={image} alt={fullName}/>
+                <img src={image} alt={name}/>
             <figcaption>
-                {fullName}
+                {name}
             </figcaption>
         </figure>
     )
