@@ -9,7 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #00b0cd;
+  background-color: #06aecc;
 }
 
 code {
@@ -21,22 +21,29 @@ header{
   display: flex;
   justify-content: space-between;
   padding: 0 1rem;
-  background-image: linear-gradient(#8bd997, #00b0cd)
+  background-image: linear-gradient(#8bd997, #06aecc)
 }
 
 figure{
-  background-color: aliceblue;
+  background-color: #55C1FF;
   width: 250px;
   height: 250px;
+  padding: 0 5px;
+  padding-top: 5px;
+  border-radius: 20px;
 }
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 img {
-  width: inherit;
+  width: 100%;
   height: 80%;
-  object-fit: contain;
+  object-fit: cover;
+}
+
+.directions{
+  padding-left: 1rem;
 }
