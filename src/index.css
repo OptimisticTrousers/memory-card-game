@@ -42,11 +42,12 @@ h1{
 
 figure{
   background-color: #55C1FF;
-  width: 250px;
-  height: 250px;
+  width: 80%;
+  height: min-content;
   padding: 0 5px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding-top: 10px;
+  padding-bottom: 10px;
   border-radius: 20px;
 }
 
@@ -60,7 +61,8 @@ p.directions{
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(16%, 1fr));
+  padding-right: 3rem;
 }
 
 img {
