@@ -28,6 +28,7 @@ code {
 header{
   display: flex;
   justify-content: space-between;
+  gap: 16px;
   padding: 0 1rem;
   background-image: linear-gradient(black, #06aecc)
 }
@@ -81,4 +82,14 @@ img {
   height: 80%;
   object-fit: cover;
   border-radius: 20px;
+}
+
+footer{
+  padding: 1rem 0;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }

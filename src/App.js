@@ -55,6 +55,9 @@ export default function App() {
       <main>
         {renderedCards}
       </main>
+      <footer>
+        <a href="https://github.com/OptimisticTrousers">Created by Tony Isern</a>
+      </footer>
     </div>
   );
 }
