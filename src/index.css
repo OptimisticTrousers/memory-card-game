@@ -1,3 +1,8 @@
+@font-face{
+  font-family: get-schwifty;
+  src: url(fonts/get-schwifty.ttf);
+}
+
 html{
   height: 100%;
 }
@@ -21,7 +26,15 @@ header{
   display: flex;
   justify-content: space-between;
   padding: 0 1rem;
-  background-image: linear-gradient(#8bd997, #06aecc)
+  background-image: linear-gradient(black, #06aecc)
+}
+
+h1{
+  font-size: 64px;
+  color: #02b0ca;
+  -webkit-text-stroke: 2px #6dbc79;
+  font-family: get-schwifty;
+  text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
 }
 
 figure{
