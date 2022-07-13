@@ -1,10 +1,15 @@
+html{
+  height: 100%;
+}
 body {
+  min-height: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #00b0cd;
 }
 
 code {
@@ -15,18 +20,23 @@ code {
 header{
   display: flex;
   justify-content: space-between;
+  padding: 0 1rem;
+  background-image: linear-gradient(#8bd997, #00b0cd)
 }
 
 figure{
+  background-color: aliceblue;
+  width: 250px;
+  height: 250px;
 }
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 img {
-  width: 250px;
-  height: 250px;
-  object-fit: scale-down;
+  width: inherit;
+  height: 80%;
+  object-fit: contain;
 }
