@@ -3,13 +3,16 @@
   src: url(fonts/get-schwifty.ttf);
 }
 
+@import url(//db.onlinewebfonts.com/c/4d61699dc665f1ba79b9796089b48f91?family=MotelXeniaW00-Regular);
+
 html{
   height: 100%;
 }
 body {
+  color: white;
   min-height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: MotelXeniaW00-Regular, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -42,13 +45,17 @@ figure{
   width: 250px;
   height: 250px;
   padding: 0 5px;
-  padding-top: 5px;
+  font-size: 2rem;
+  padding-top: 10px;
   border-radius: 20px;
 }
 
 figcaption {
-  padding-top: 0.5rem;
   text-align: center;
+}
+
+p.directions{
+  font-size: 2rem;
 }
 
 main {

@@ -51,7 +51,7 @@ export default function App() {
           <h2>Best score: {bestScore}</h2>
         </div>
       </header>
-        <p className="directions">Directions: Get points by clicking on an image but don't click on any more than one</p>
+        <p className="directions">SPIDERS: Get points by clicking on an image but don't click on any more than one</p>
       <main>
         {renderedCards}
       </main>
