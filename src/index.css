@@ -73,7 +73,7 @@ p.directions{
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(277px, 1fr));
   padding-right: 3rem;
 }
 
