@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.6cbb9c56.css",
-    "main.js": "/react-gh-pages/static/js/main.fe31698e.js",
-    "static/media/get-schwifty.ttf": "/react-gh-pages/static/media/get-schwifty.c3d1dfc692e3547fed16.ttf",
-    "index.html": "/react-gh-pages/index.html",
-    "main.6cbb9c56.css.map": "/react-gh-pages/static/css/main.6cbb9c56.css.map",
-    "main.fe31698e.js.map": "/react-gh-pages/static/js/main.fe31698e.js.map"
+    "main.css": "/TOP-memory-card-game/static/css/main.e2ae1296.css",
+    "main.js": "/TOP-memory-card-game/static/js/main.fe31698e.js",
+    "static/media/get-schwifty.ttf": "/TOP-memory-card-game/static/media/get-schwifty.c3d1dfc692e3547fed16.ttf",
+    "index.html": "/TOP-memory-card-game/index.html",
+    "main.e2ae1296.css.map": "/TOP-memory-card-game/static/css/main.e2ae1296.css.map",
+    "main.fe31698e.js.map": "/TOP-memory-card-game/static/js/main.fe31698e.js.map"
   },
   "entrypoints": [
-    "static/css/main.6cbb9c56.css",
+    "static/css/main.e2ae1296.css",
     "static/js/main.fe31698e.js"
   ]
 }
