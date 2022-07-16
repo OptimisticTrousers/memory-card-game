@@ -75,6 +75,8 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(277px, 1fr));
   padding-right: 3rem;
+  justify-items: start;
+  align-items: start;
 }
 
 img {
@@ -92,4 +94,10 @@ footer{
 a{
   text-decoration: none;
   color: white;
+}
+
+@media(max-width: 300px){
+  figure{
+    width: 70%;
+  }
 }
