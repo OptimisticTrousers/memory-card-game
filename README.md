@@ -10,7 +10,7 @@
 
 </p>
 
-> Created a memory game.
+> Created a memory game to practice the useEffect hook in react and more practice with state and props.
 
 ### 🏠 [Homepage](https://github.com/OptimisticTrousers/reactCalculator)
 
