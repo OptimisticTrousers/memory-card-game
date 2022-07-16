@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/TOP-memory-card-game/static/css/main.7653cda2.css",
+    "main.css": "/TOP-memory-card-game/static/css/main.117ab3e6.css",
     "main.js": "/TOP-memory-card-game/static/js/main.fe31698e.js",
     "static/media/get-schwifty.ttf": "/TOP-memory-card-game/static/media/get-schwifty.c3d1dfc692e3547fed16.ttf",
     "index.html": "/TOP-memory-card-game/index.html",
-    "main.7653cda2.css.map": "/TOP-memory-card-game/static/css/main.7653cda2.css.map",
+    "main.117ab3e6.css.map": "/TOP-memory-card-game/static/css/main.117ab3e6.css.map",
     "main.fe31698e.js.map": "/TOP-memory-card-game/static/js/main.fe31698e.js.map"
   },
   "entrypoints": [
-    "static/css/main.7653cda2.css",
+    "static/css/main.117ab3e6.css",
     "static/js/main.fe31698e.js"
   ]
 }
